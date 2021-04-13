@@ -1,0 +1,7 @@
+.layout{
+    color:aliceblue;
+    background-image: url('../../assets/padrao.jpg');
+    display: flex;
+    flex-direction:column;
+    justify-content: space-between;
+}

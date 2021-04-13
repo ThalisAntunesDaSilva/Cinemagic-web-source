@@ -1,0 +1,7 @@
+.layout{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    padding-bottom: 30vh;
+    margin-top: 15vh;
+}

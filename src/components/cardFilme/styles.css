@@ -1,0 +1,7 @@
+.filmes{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 40vw;
+    
+}

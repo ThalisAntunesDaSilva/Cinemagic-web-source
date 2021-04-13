@@ -1,0 +1,17 @@
+.body-section{
+    width: 60%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    
+}
+
+.title{
+    color:white;
+}
+.section{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}

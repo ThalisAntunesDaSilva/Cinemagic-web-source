@@ -1,0 +1,19 @@
+.navbar{
+    top: 0;
+    color: aliceblue;
+    background-color:black;
+    width:100%;
+    display: flex;
+    flex-direction:center;
+}
+
+.link{
+    color: aliceblue;
+    text-decoration:none;
+}
+
+.link:hover{
+    color: #8B0000;
+    text-decoration:none;
+    transition: 1s;
+}
