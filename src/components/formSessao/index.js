@@ -73,6 +73,11 @@ const Example = (props) => {
         <Input onChange = {e => setValorCupons(e.target.value)}/>
         </div>
         <div className="lado2">
+        <Label for="Nome" className="Nome text-light mt-3">Filmes em cartaz</Label>
+        <Input  onChange = {e => setFilmes(e.target.value)}>
+          
+        </Input>
+
         <Label for="Nome" className="Nome text-light mt-3">Número Sala</Label>
         <Input  onChange = {e => setSalas(e.target.value)}>
       

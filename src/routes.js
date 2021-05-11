@@ -9,8 +9,9 @@ import CadastroCinema from './pages/CadastroCinema';
 import CadastroFilme from './pages/CadastroFilme';
 import CadastroSessao from './pages/CadastroSessao';
 import ListaSessoes from './pages/ListaSessoes';
-import ListaFilmes from './pages/ListaFilmes'
-import ListaResultadoPesquisa from './pages/ListaResultadoPesquisa'
+import ListaFilmes from './pages/ListaFilmes';
+import EditarFilme from './pages/EditarFilme';
+import ListaResultadoPesquisa from './pages/ListaResultadoPesquisa';
 
 
 
@@ -58,6 +59,7 @@ export default function Routes() {
                 <Route path="/CadastroFilme" exact component={CadastroFilme} />
                 <Route path="/ListaSessoes" exact component={ListaSessoes} />
                 <Route path="/ListaFilmes" exact component={ListaFilmes} />
+                <Route path="/EditarFilme" exact component={EditarFilme}/>
                 <Route path="/ResultadoPesquisa" exact component={ListaResultadoPesquisa} />
                 <Route path="/ResultadoPesquisa" exact component={ListaResultadoPesquisa} />
             </Switch>

@@ -1,12 +1,11 @@
 import React, { useState, useEffect } from 'react';
-import formFilme from '../../components/formFilme/index.js';
+import editarFilme from '../../components/editarFilme/index.js';
 
-export default function CadastroFilme() {
-
+export default function Teste() {
     return (
         <>
             <div className="body">
-                {formFilme()}
+                {editarFilme()}
             </div>
         </>
     );

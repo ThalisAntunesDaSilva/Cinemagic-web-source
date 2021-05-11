@@ -2,7 +2,7 @@ import axios from 'axios';
 
 const api = axios.create({
 
-    baseURL: 'https://cinemagic-grupo04.herokuapp.com',
+    baseURL: 'https://cinemagic-grupo04.herokuapp.com/',
 
 
 })

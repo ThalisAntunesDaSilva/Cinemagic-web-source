@@ -17,10 +17,9 @@ const Example = (props) => {
   const [qtdInteira,setQtdInteira] = useState(0);
   const [qtdMeia,setQtdMeia] = useState(0);
   async function click(e) {
-    alert(qtdMeia);
     const data = {
-      clienteId: sessao.id,
-      sessaoId: cliente.id,
+      clienteId: cliente.id,
+      sessaoId: sessao.id,
       ingressos: [
         {
           quantidade: qtdMeia,
@@ -34,13 +33,13 @@ const Example = (props) => {
       tipoPagamento: 0
     };
     try {
-
       const response = await api.post("compras", data, {
         headers: {
           authorization: getToken()
         }
       },
       );
+      localStorage.setItem("sessaoAtual",null);
       window.location.href = response.data.code;
       history.push(response.data.code);
     } catch (ex) {
@@ -55,15 +54,17 @@ const Example = (props) => {
 
         <Label for="Nome" className="Nome text-light mt-3">Ingressos Inteira</Label>
         <Input type="select" onChange={value => setQtdInteira(value.target.value)}>
-          <option value>1</option>
-          <option>2</option>
-          <option>3</option>
-          <option>4</option>
-          <option>5</option>
+          <option value = "0">0</option>
+          <option value = "1">1</option>
+          <option value = "2">2</option>
+          <option value = "3">3</option>
+          <option value = "4">4</option>
+          <option value = "5">5</option>
         </Input>
 
         <Label for="Nome" className="Nome text-light mt-3">Ingressos meio</Label>
         <Input type="select" onChange = {value => setQtdMeia(value.target.value)}>
+        <option value = "0">0</option>
           <option value = "1">1</option>
           <option value = "2">2</option>
           <option value = "3">3</option>
@@ -72,11 +73,12 @@ const Example = (props) => {
         </Input>
 
         <Button color="danger" className="button mt-3"  onClick={click}>Compre já</Button>
-
+        
       </Form>
+
       </div>
    
-
+      
     
   );
 }

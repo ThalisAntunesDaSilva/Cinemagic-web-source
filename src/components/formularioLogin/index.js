@@ -25,6 +25,7 @@ const Example = (props) => {
         const token = res.headers["authorization"]   
         const decoded = jwt(token)
         login(token);
+        console.log(decoded)
         const clientRes = await api.get("/clientes",{
             params:{
                 email: decoded.sub
@@ -34,11 +35,13 @@ const Example = (props) => {
             }
         })
         localStorage.setItem('cliente',JSON.stringify(clientRes.data))
+        
         history.push("/")
     }catch(ex){
-        setErroLogin(ex.response.data.message)
+      
+        //setErroLogin(ex.response.data.message)
         
-        alert(ex.response.data.message)
+        alert(ex)
     }
   }
  

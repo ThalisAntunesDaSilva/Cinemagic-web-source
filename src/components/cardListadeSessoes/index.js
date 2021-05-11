@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { Jumbotron, Button, CardSubtitle } from 'reactstrap';
+import { Jumbotron, Button } from 'reactstrap';
 import api from '../../services/api';
 import { useHistory } from 'react-router-dom';
 import './styles.css';
@@ -8,11 +8,9 @@ const Example = (props) => {
   const history = useHistory();
   const [sessao, setSessao] = useState([]);
   const token = localStorage.getItem('token');
-  const [id, setId] = useState('');
 
   
   const encaminhaCompraSessao =  ses => async e =>{
-
     try {
       localStorage.setItem('sessaoAtual', JSON.stringify(ses));
       history.push('/Compra');
@@ -46,12 +44,8 @@ const Example = (props) => {
         {sessao.map(ses => (
           <li key={ses.id}>
             <Jumbotron>
-            <CardSubtitle tag="h2" className="mb-2 text-muted">
-            {ses.sala.cinema.cidade.nome}-{ses.sala.cinema.cidade.estado.uf}
-              
-              
-              </CardSubtitle>
-         
+
+              <h1 className="display-3">{ses.sala.cinema.cidade.nome}-{ses.sala.cinema.cidade.estado.uf}</h1>
               <p className="lead">Confira as sessões disponíveis</p>
               <div className="section">
                 <div>

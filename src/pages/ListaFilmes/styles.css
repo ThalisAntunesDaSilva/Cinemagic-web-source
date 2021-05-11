@@ -1,0 +1,38 @@
+
+li a {
+    float: left;
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 8px 8px;
+    text-decoration: none;
+}
+
+.super{
+    float: left;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #333;
+}
+
+.body-section{
+    width: 60%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    
+}
+
+.title{
+    color:white;
+    text-align: center;
+}
+.section{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
